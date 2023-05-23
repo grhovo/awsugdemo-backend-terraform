@@ -1,0 +1,17 @@
+[Unit]
+Description=Web App for demo
+
+[Service]
+Type=simple
+User=root
+Group=root
+TimeoutStartSec=0
+Restart=on-failure
+RestartSec=30s
+#ExecStartPre=
+ExecStart=/usr/bin/market/server.sh
+SyslogIdentifier=WebApp
+#ExecStop=
+
+[Install]
+WantedBy=multi-user.target
